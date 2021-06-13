@@ -1,6 +1,6 @@
 {
   "name": "priority-queue-node",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Priority Queue implementation for Node.js",
   "main": "index.js",
   "scripts": {
