@@ -18,6 +18,7 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm run rename @vincegando/priority-queue-node
       - uses: actions/setup-node@v2
         with:
           registry-url: 'https://npm.pkg.github.com'
@@ -25,3 +26,4 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: npm run rename priority-queue-node

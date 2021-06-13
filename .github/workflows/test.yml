@@ -33,3 +33,18 @@ jobs:
           architecture: ${{ matrix.architecture }}
       - run: npm install
       - run: npm test
+      - name: Coveralls Parallel
+        uses: coverallsapp/github-action@v1.1.2
+        with:
+          github-token: ${{ secrets.github_token }}
+          flag-name: run-${{ matrix.node_version }}-${{ matrix.architecture }}
+          parallel: true
+  post_build:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Coveralls Post Test
+        uses: coverallsapp/github-action@v1.1.2
+        with:
+          github-token: ${{ secrets.github_token }}
+          parallel-finished: true
