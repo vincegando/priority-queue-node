@@ -6,7 +6,8 @@
   "scripts": {
     "test": "tap",
     "lint": "eslint .",
-    "pretest": "npm run lint"
+    "pretest": "npm run lint",
+    "rename": "node rename.js"
   },
   "keywords": [
     "priority",
