@@ -1,6 +1,6 @@
 {
   "name": "@vincegando/priority-queue-node",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Priority Queue implementation for Node.js",
   "main": "index.js",
   "scripts": {
